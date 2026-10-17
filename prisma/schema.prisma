@@ -1,0 +1,148 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id      String   @id @default(cuid())
+  name    String?
+  email   String   @unique
+  members Member[]
+  // + auth polja/modeli
+}
+
+model Group {
+  id         String     @id @default(cuid())
+  name       String
+  inviteCode String     @unique @default(cuid())
+  createdAt  DateTime   @default(now())
+  members    Member[]
+  expenses   Expense[]
+  payments   Payment[]
+  activities Activity[]
+}
+
+model Member {
+  id      String  @id @default(cuid())
+  name    String
+  groupId String
+  group   Group   @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  userId  String? // null = "gost" član bez naloga; može kasnije da ga preuzme registrovan korisnik
+  user    User?   @relation(fields: [userId], references: [id])
+
+  paidExpenses     Expense[]      @relation("PaidBy")
+  shares           ItemShare[]
+  splits           ExpenseSplit[]
+  paymentsSent     Payment[]      @relation("PaymentFrom")
+  paymentsReceived Payment[]      @relation("PaymentTo")
+  activities       Activity[]     @relation("ActivityActor")
+
+  @@unique([groupId, userId])
+}
+
+enum ExpenseSource {
+  MANUAL
+  QR
+}
+
+model Expense {
+  id            String         @id @default(cuid())
+  groupId       String
+  group         Group          @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  title         String
+  paidById      String
+  paidBy        Member         @relation("PaidBy", fields: [paidById], references: [id], onDelete: NoAction)
+  total         Int // pare
+  tip           Int            @default(0)
+  date          DateTime       @default(now())
+  source        ExpenseSource  @default(MANUAL)
+  receiptNumber String? // broj fiskalnog računa (samo za QR)
+  storeName     String?
+  createdAt     DateTime       @default(now())
+  items         ExpenseItem[]
+  splits        ExpenseSplit[]
+
+  @@unique([groupId, receiptNumber]) // isti fiskalni račun ne može dvaput u istu grupu
+  @@index([groupId, createdAt])
+}
+
+model ExpenseItem {
+  id        String      @id @default(cuid())
+  expenseId String
+  expense   Expense     @relation(fields: [expenseId], references: [id], onDelete: Cascade)
+  name      String
+  quantity  Float
+  unitPrice Int
+  total     Int
+  shares    ItemShare[]
+
+  @@index([expenseId])
+}
+
+model ItemShare {
+  itemId   String
+  item     ExpenseItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  memberId String
+  member   Member      @relation(fields: [memberId], references: [id], onDelete: NoAction)
+  units    Int         @default(1) // težina udela: "Pivo ×3" → Marko 2, Đorđe 1
+
+  @@id([itemId, memberId])
+}
+
+model ExpenseSplit {
+  expenseId String
+  expense   Expense @relation(fields: [expenseId], references: [id], onDelete: Cascade)
+  memberId  String
+  member    Member  @relation(fields: [memberId], references: [id], onDelete: NoAction)
+  amount    Int // koliko član duguje za ovaj račun (uključujući bakšiš)
+
+  @@id([expenseId, memberId])
+}
+
+model Payment {
+  id      String   @id @default(cuid())
+  groupId String
+  group   Group    @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  fromId  String
+  from    Member   @relation("PaymentFrom", fields: [fromId], references: [id], onDelete: NoAction)
+  toId    String
+  to      Member   @relation("PaymentTo", fields: [toId], references: [id], onDelete: NoAction)
+  amount  Int
+  date    DateTime @default(now())
+
+  @@index([groupId])
+}
+
+enum ActivityType {
+  GROUP_CREATED
+  MEMBER_ADDED
+  MEMBER_JOINED // registrovan korisnik se pridružio ili preuzeo gost člana
+  MEMBER_REMOVED
+  EXPENSE_CREATED
+  EXPENSE_UPDATED
+  EXPENSE_DELETED
+  PAYMENT_CREATED
+  PAYMENT_DELETED
+}
+
+model Activity {
+  id        String       @id @default(cuid())
+  groupId   String
+  group     Group        @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  actorId   String? // član koji je izvršio akciju
+  actor     Member?      @relation("ActivityActor", fields: [actorId], references: [id], onDelete: SetNull)
+  type      ActivityType
+  data      Json // snimak podataka u trenutku akcije (naslov, iznos, imena...)
+  createdAt DateTime     @default(now())
+
+  @@index([groupId, createdAt])
+}
