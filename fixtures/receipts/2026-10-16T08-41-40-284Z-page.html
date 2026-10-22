@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="sr-Cyrl-RS">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>&#x41F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x430; &#x440;&#x430;&#x447;&#x443;&#x43D;&#x430; - TaxCore</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="/lib/bootstrap-datetimepicker/css/tempus-dominus.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="/css/themes/default/custom.css" />
+
+    <link rel="stylesheet" href="/lib/toastr.js/toastr.min.css" />
+
+    <style>
+        .form-group {
+            display: grid;
+        }
+
+        .col-form-label {
+            font-weight: bold;
+        }
+    </style>
+
+
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/popper.js/umd/popper.min.js"></script>
+    <script src="/lib/jqueryui/jquery-ui.min.js"></script>
+    <script src="/lib/jquery.mask/jquery.mask.min.js"></script>
+    <script src="/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/jquery-validate/jquery.validate.min.js"></script>
+    <script src="/js/knockout-3.5.1.js"></script>
+    <script src="/js/invoice-verify.js?v=GJUkuN7jB0Vo-h_-WxOfLjuP9RYwajl0dE2MBmIiFfY"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            viewModel = new ViewModel();
+            ko.applyBindings(viewModel);
+            viewModel.InvoiceNumber('UYY9M33J-UYY9M33J-209722');
+            viewModel.Token('1cafb0a7-0c64-4e5c-9070-7bc73a4b197b');
+
+viewModel.IsNormalOrAdvance(true); viewModel.IsNormalSale(true);
+                });
+
+    </script>
+
+    <script type="text/javascript">
+        var rootPath = 'https://suf.purs.gov.rs';
+        var lang = 'sr-Cyrl-RS';
+        var dateTimePickerFormat = 'd.m.yyyy. HH:ii';
+        var showMeridianTime = true;
+    </script>
+</head>
+<body class="body-content">
+    <div class="container">
+        <div class="m-t-md">
+            <div class="mr-1 ml-1 justify-content-between d-flex">
+                <a href="/" class="navbar-brand font-bold" style="background-color:inherit;color:black;padding-right: 5px;margin-right: 5px;display: flex;align-items: center;">
+                    <img src="/images/logo.png" width="40"> <span style="padding-left: 14px;">  &#x41F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x430; &#x440;&#x430;&#x447;&#x443;&#x43D;&#x430; </span>
+                </a>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a id="languagesSelect" href="#" class="nav-link dropdown-toggle pb-1 pt-3" data-bs-toggle="dropdown"><img src="/images/Flags/sr-Cyrl-RS.png" alt="&#x441;&#x440;&#x43F;&#x441;&#x43A;&#x438; (&#x45B;&#x438;&#x440;&#x438;&#x43B;&#x438;&#x446;&#x430;, &#x421;&#x440;&#x431;&#x438;&#x458;&#x430;)" width="16" /></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                                <a href="/Home/ChangeLanguage/sr-Cyrl-RS" class="dropdown-item font-bold"><img src="/images/Flags/sr-Cyrl-RS.png" alt="&#x441;&#x440;&#x43F;&#x441;&#x43A;&#x438; (&#x45B;&#x438;&#x440;&#x438;&#x43B;&#x438;&#x446;&#x430;, &#x421;&#x440;&#x431;&#x438;&#x458;&#x430;)" width="16" /> &#x421;&#x440;&#x43F;&#x441;&#x43A;&#x438; (&#x45B;&#x438;&#x440;&#x438;&#x43B;&#x438;&#x446;&#x430;, &#x421;&#x440;&#x431;&#x438;&#x458;&#x430;)</a>
+                                <a href="/Home/ChangeLanguage/en-US" class="dropdown-item "><img src="/images/Flags/en-US.png" alt="English (United States)" width="16" /> English (United States)</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr />
+
+<form action="/v" method="post">    <div class="row">
+        <div class="col-lg-12  text-center">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <i class="glyphicon glyphicon-info-sign"></i>
+                    &#x421;&#x442;&#x430;&#x442;&#x443;&#x441; &#x440;&#x430;&#x447;&#x443;&#x43D;&#x430;
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                                <label class="h2" for="invoiceStatusLabel" id="invoiceStatusLabel" style="margin-top:10px">&#x420;&#x430;&#x447;&#x443;&#x43D; &#x458;&#x435; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x435;&#x43D;</label>
+                            <br /> <img src="/images/Verification/Valid.png" width="100" height="100" />
+
+
+                        </div>
+                        <div class="col-md-12">
+
+                                    <span style="padding: 10px 0px">
+                                        <text>
+                                            <b>
+                                                &#x423;&#x43F;&#x43E;&#x440;&#x435;&#x434;&#x438;&#x442;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x435; &#x438;&#x437;&#x434;&#x430;&#x432;&#x430;&#x45A;&#x430; &#x438; &#x438;&#x437;&#x43D;&#x43E;&#x441; &#x43F;&#x440;&#x43E;&#x43C;&#x435;&#x442;&#x430; &#x43D;&#x430; &#x43E;&#x432;&#x43E;&#x458; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438; &#x438; &#x43D;&#x430; &#x412;&#x430;&#x448;&#x435;&#x43C; &#x440;&#x430;&#x447;&#x443;&#x43D;&#x443;. &#x423; &#x441;&#x43B;&#x443;&#x447;&#x430;&#x458;&#x443; &#x43D;&#x435;&#x458;&#x435;&#x434;&#x43D;&#x430;&#x43A;&#x43E;&#x441;&#x442;&#x438;, <a target="_blank" href='/CustomerReport/UYY9M33J-UYY9M33J-209722'>&#x43F;&#x440;&#x438;&#x458;&#x430;&#x432;&#x438;&#x442;&#x435; &#x441;&#x43B;&#x443;&#x447;&#x430;&#x458; &#x43F;&#x43E;&#x440;&#x435;&#x441;&#x43A;&#x43E;&#x458; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x438;.</a>                                            </b>
+                                        </text>
+                                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 text-center">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="glyphicon glyphicon-arrow-right"></i>
+                    &#x417;&#x430;&#x445;&#x442;&#x435;&#x432; &#x437;&#x430; &#x444;&#x438;&#x441;&#x43A;&#x430;&#x43B;&#x438;&#x437;&#x430;&#x446;&#x438;&#x458;&#x443; &#x440;&#x430;&#x447;&#x443;&#x43D;&#x430;
+                </div>
+                <div class="panel-body">
+                        <div class="form-group">
+                            <label class="col-form-label">&#x41F;&#x418;&#x411;</label>
+                            <div class="col-md-12">
+                                <span id="tinLabel">
+                                    104213669
+                                    <span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-form-label">&#x418;&#x43C;&#x435; &#x43F;&#x440;&#x43E;&#x434;&#x430;&#x458;&#x43D;&#x43E;&#x433; &#x43C;&#x435;&#x441;&#x442;&#x430;</label>
+                            <div class="col-md-12">
+                                <span id="shopFullNameLabel">1086300-&#x41F;&#x440;&#x43E;&#x434;&#x430;&#x432;&#x43D;&#x438;&#x446;&#x430; 9</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">&#x410;&#x434;&#x440;&#x435;&#x441;&#x430;</label>
+                            <div class="col-md-12">
+                                <span id="addressLabel">&#x41F;&#x410;&#x412;&#x41B;&#x410; &#x41E;&#x420;&#x41B;&#x41E;&#x412;&#x418;&#x40B;&#x410; 19   </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">&#x413;&#x440;&#x430;&#x434;</label>
+                            <div class="col-md-12">
+                                <span id="cityLabel">&#x411;&#x41E;&#x413;&#x410;&#x422;&#x418;&#x40B;</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">&#x41E;&#x43F;&#x448;&#x442;&#x438;&#x43D;&#x430;</label>
+                            <div class="col-md-12">
+                                <span id="administrativeUnitLabel">&#x411;&#x43E;&#x433;&#x430;&#x442;&#x438;&#x45B;</span>
+                            </div>
+                        </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">&#x418;&#x414; &#x43A;&#x443;&#x43F;&#x446;&#x430;</label>
+                        <div class="col-md-12">
+                            <span id="buyerIdLabel">
+
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">&#x417;&#x430;&#x442;&#x440;&#x430;&#x436;&#x438;&#x43E;</label>
+                        <div class="col-md-12">
+                            <span id="requestedByLabel">
+                                UYY9M33J
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="">&#x412;&#x440;&#x441;&#x442;&#x430;</label>
+                        <div class="col-md-12">
+                            <span id="invoiceTypeId">&#x41F;&#x440;&#x43E;&#x43C;&#x435;&#x442;</span>
+                            <span id="transactionTypeId">&#x41F;&#x440;&#x43E;&#x434;&#x430;&#x458;&#x430;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 text-center">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="glyphicon glyphicon-arrow-left"></i>
+                    &#x420;&#x435;&#x437;&#x443;&#x43B;&#x442;&#x430;&#x442; &#x444;&#x438;&#x441;&#x43A;&#x430;&#x43B;&#x438;&#x437;&#x430;&#x446;&#x438;&#x458;&#x435; &#x440;&#x430;&#x447;&#x443;&#x43D;&#x430;
+                </div>
+                <div class="panel-body">
+
+                    <div class="form-group">
+                        <label class="col-form-label">&#x423;&#x43A;&#x443;&#x43F;&#x430;&#x43D; &#x438;&#x437;&#x43D;&#x43E;&#x441;</label>
+                        <div class="col-md-12">
+                            <span id="totalAmountLabel">
+                                3.295,70
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">&#x411;&#x440;&#x43E;&#x458;&#x430;&#x447; &#x43F;&#x43E; &#x432;&#x440;&#x441;&#x442;&#x438; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x430;&#x43A;&#x446;&#x438;&#x458;&#x435;</label>
+                        <div class="col-md-12">
+                            <span id="transactionTypeCounterLabel">
+                                209496
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">&#x411;&#x440;&#x43E;&#x458;&#x430;&#x447; &#x443;&#x43A;&#x443;&#x43F;&#x43D;&#x43E;&#x433; &#x431;&#x440;&#x43E;&#x458;&#x430;</label>
+                        <div class="col-md-12">
+                            <span id="totalCounterLabel">
+                                209722
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">&#x415;&#x43A;&#x441;&#x442;&#x435;&#x43D;&#x437;&#x438;&#x458;&#x430; &#x431;&#x440;&#x43E;&#x458;&#x430;&#x447;&#x430; &#x440;&#x430;&#x447;&#x443;&#x43D;&#x430;</label>
+                        <div class="col-md-12">
+                            <span id="invoiceCounterExtensionLabel">
+                                &#x41F;&#x41F;
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">&#x417;&#x430;&#x442;&#x440;&#x430;&#x436;&#x438;&#x43E; - &#x41F;&#x43E;&#x442;&#x43F;&#x438;&#x441;&#x430;&#x43E; - &#x411;&#x440;&#x43E;&#x458;&#x430;&#x447;</label>
+                        <div class="col-md-12">
+                            <span id="invoiceNumberLabel">
+                                UYY9M33J-UYY9M33J-209722
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">&#x41F;&#x43E;&#x442;&#x43F;&#x438;&#x441;&#x430;&#x43E;</label>
+                        <div class="col-md-12">
+                            <span id="signedByLabel">
+                                UYY9M33J
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">&#x41F;&#x424;&#x420; &#x432;&#x440;&#x435;&#x43C;&#x435; (&#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x441;&#x43A;&#x430; &#x437;&#x43E;&#x43D;&#x430; &#x441;&#x435;&#x440;&#x432;&#x435;&#x440;&#x430;)</label>
+                        <div class="col-md-12">
+                            <span id="sdcDateTimeLabel">
+                                18.9.2026. 08:35:23
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <div class="row">
+            <div class="col-lg-12 text-center centered">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">
+                            <a data-bs-toggle="collapse" href="#collapse-specs" class="collapsed" aria-expanded="false"><i class="glyphicon glyphicon-align-justify"></i> &#x421;&#x43F;&#x435;&#x446;&#x438;&#x444;&#x438;&#x43A;&#x430;&#x446;&#x438;&#x458;&#x430; &#x440;&#x430;&#x447;&#x443;&#x43D;&#x430;</a>
+                        </h5>
+                    </div>
+                    <div id="collapse-specs" class="panel-collapse in collapse">
+                        <div class="panel-body">
+                            <div class="table-responsive m-t">
+                                <table class="table invoice-table" aria-label="Invoice specification" data-bind="visible: !LoadingSpecifications()">
+                                    <thead>
+                                        <tr>
+                                            <th style="min-height: 200px;">&#x41D;&#x430;&#x437;&#x438;&#x432;</th>
+                                            <th>&#x41A;&#x43E;&#x43B;&#x438;&#x447;&#x438;&#x43D;&#x430;</th>
+                                            <th>&#x408;&#x435;&#x434;. &#x446;&#x435;&#x43D;&#x430; &#x441;&#x430; &#x41F;&#x414;&#x412;</th>
+                                            <th>&#x423;&#x43A;&#x443;&#x43F;&#x43D;&#x430; &#x446;&#x435;&#x43D;&#x430;</th>
+                                            <th>&#x41E;&#x441;&#x43D;&#x43E;&#x432;&#x438;&#x446;&#x430;</th>
+                                            <th>&#x41F;&#x414;&#x412;</th>
+                                            <th>&#x421;&#x442;&#x43E;&#x43F;&#x430;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tbody data-bind="foreach: Specifications">
+                                        <tr>
+                                            <td>
+                                                <strong data-bind="text: Name"></strong>
+                                            </td>
+                                            <td data-bind="decimalAsText: Quantity"></td>
+                                            <td data-bind="decimalAsText: UnitPrice"></td>
+                                            <td data-bind="decimalAsText: Total"></td>
+                                            <td data-bind="decimalAsText: TaxBaseAmount"></td>
+                                            <td data-bind="decimalAsText: VatAmount"></td>
+                                            <td data-bind="text: Label"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div data-bind="visible: LoadingSpecifications" class="sk-spinner sk-spinner-wave">
+                                    <div class="sk-rect1"></div>
+                                    <div class="sk-rect2"></div>
+                                    <div class="sk-rect3"></div>
+                                    <div class="sk-rect4"></div>
+                                    <div class="sk-rect5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-lg-12 text-center centered">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-bs-toggle="collapse" href="#collapse3"><i class="glyphicon glyphicon-list-alt"></i> &#x416;&#x443;&#x440;&#x43D;&#x430;&#x43B;</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                            <pre style="font-family:monospace">============ ФИСКАЛНИ РАЧУН ============
+               104213669
+  PROIZVODNO-TRGOVINSKO PREDUZEĆE EURO
+           ŠA.M DOO LIPOLIST
+          1086300-Продавница 9
+          ПАВЛА ОРЛОВИЋА 19
+                Богатић
+ЕСИР број:                      220/e1.0
+-------------ПРОМЕТ ПРОДАЈА-------------
+Артикли
+========================================
+Назив   Цена         Кол.         Укупно
+28797 HDPE  KESA VELIKA STAMPA /kom (Ђ)
+         5,00          1            5,00
+730303 ROTHMANS SILVER 100S /kom (Ђ)
+       430,00          1          430,00
+50995 SAVA HLEB T-500 ELEKTRO /kom (Е)
+        65,00          2          130,00
+13704 MINERALNA VODA 2L MINAKVA /kom (Ђ)
+        77,00          1           77,00
+721976 KONCEN KOKOSIJE SUPE 44GR /kom (Ђ
+)
+        65,00          1           65,00
+725877 SLAG PROMEKS 500GR /kom (Ђ)
+       337,00          1          337,00
+718463 KONC GOVEDJE SUPE 44G /kom (Ђ)
+        69,00          1           69,00
+16199 GUSTIN 200G PROMEKS /kom (Ђ)
+        49,00          1           49,00
+5292 PUDING SLATKA PAVLAKA 40G &quot;CENTROPR
+OIZVOD&quot; /kom (Ђ)
+        36,00          3          108,00
+711546 PLAZMA MLEVENA 800G /kom (Ђ)
+       594,90          1          594,90
+21007 SCHOGETTEN BELA COKOLADA 100G /kom
+ (Ђ)
+       179,00          1          179,00
+14587 SONA KISELINA 1L &quot;SANI&quot; /kom (Ђ)
+       143,00          1          143,00
+42679 PIRINAC DUGO ZRNO 900G /kom (Е)
+       145,00          1          145,00
+34393 Doncafe Dzezverska 200g /kom (Ђ)
+       419,90          2          839,80
+862601 MILKA WHITE 90G ( EAN: 7622202265
+662 ) /kom (Ђ)
+       124,00          1          124,00
+----------------------------------------
+Укупан износ:                   3.295,70
+Готовина:                       3.295,70
+========================================
+Ознака       Име      Стопа        Порез
+Ђ           О-ПДВ   20,00%        503,45
+Е           П-ПДВ   10,00%         25,00
+----------------------------------------
+Укупан износ пореза:              528,45
+========================================
+ПФР време:           18.09.2026. 8:35:23
+ПФР број рачуна: UYY9M33J-UYY9M33J-20972
+2
+Бројач рачуна:           209496/209722ПП
+========================================<br/><img src=data:image/gif;base64,R0lGODlhhAGEAfcAAAAAAAAAMwAAZgAAmQAAzAAA/wArAAArMwArZgArmQArzAAr/wBVAABVMwBVZgBVmQBVzABV/wCAAACAMwCAZgCAmQCAzACA/wCqAACqMwCqZgCqmQCqzACq/wDVAADVMwDVZgDVmQDVzADV/wD/AAD/MwD/ZgD/mQD/zAD//zMAADMAMzMAZjMAmTMAzDMA/zMrADMrMzMrZjMrmTMrzDMr/zNVADNVMzNVZjNVmTNVzDNV/zOAADOAMzOAZjOAmTOAzDOA/zOqADOqMzOqZjOqmTOqzDOq/zPVADPVMzPVZjPVmTPVzDPV/zP/ADP/MzP/ZjP/mTP/zDP//2YAAGYAM2YAZmYAmWYAzGYA/2YrAGYrM2YrZmYrmWYrzGYr/2ZVAGZVM2ZVZmZVmWZVzGZV/2aAAGaAM2aAZmaAmWaAzGaA/2aqAGaqM2aqZmaqmWaqzGaq/2bVAGbVM2bVZmbVmWbVzGbV/2b/AGb/M2b/Zmb/mWb/zGb//5kAAJkAM5kAZpkAmZkAzJkA/5krAJkrM5krZpkrmZkrzJkr/5lVAJlVM5lVZplVmZlVzJlV/5mAAJmAM5mAZpmAmZmAzJmA/5mqAJmqM5mqZpmqmZmqzJmq/5nVAJnVM5nVZpnVmZnVzJnV/5n/AJn/M5n/Zpn/mZn/zJn//8wAAMwAM8wAZswAmcwAzMwA/8wrAMwrM8wrZswrmcwrzMwr/8xVAMxVM8xVZsxVmcxVzMxV/8yAAMyAM8yAZsyAmcyAzMyA/8yqAMyqM8yqZsyqmcyqzMyq/8zVAMzVM8zVZszVmczVzMzV/8z/AMz/M8z/Zsz/mcz/zMz///8AAP8AM/8AZv8Amf8AzP8A//8rAP8rM/8rZv8rmf8rzP8r//9VAP9VM/9VZv9Vmf9VzP9V//+AAP+AM/+AZv+Amf+AzP+A//+qAP+qM/+qZv+qmf+qzP+q///VAP/VM//VZv/Vmf/VzP/V////AP//M///Zv//mf//zP///wAAAAAAAAAAAAAAACH5BAEAAPwALAAAAACEAYQBAAj/AAEIHEiwoMGD+xIqTEhwoUOFByMCeMhwIMWLDiUixFhRY0SODz1OBCkS5L6SEC2mNLjwI0mVHUfGbEjRJUebJ2FixCmyp8+fAi/SvPlTqE6TLYu+BBoU6cyNRDWaRBkzKcuVBafqHJrzakioO8FyNeq1K9OzZ8nKDOtTrdOvbZcyfWsWp1q7NT1aXcsTrFuse8diFQw3K2C5XNEqnpu3adSef+k+lYpYqVOqbCVqpVx18Fa/jfl+Lhv4aOjEpgujXqxZcufXdVmLdpw5stm7ek+LHb12b2navnWX7Ts892TDsGX3rgz8MGy6eC/z/r04+GPbhGNzzmj8tnPutKN7/1e9u7j51sdXz67+Vrx618fhj5+v/L1c7Km1owe/335h6rZRp96AvBHXX4FoQQdacvlthpxk/umnmHW1hUahgAtKON13FLqXH2YGEniegRjGJR1p32XnoIgPZideiQ8GyKFnJvKHG4rplRcjjcsxGN6Gz93H44o6AkXkj0geOKKON/bIH2YyBpnjdhfy6KJl+jWJX5IdNmjhkMy1mGCYXW4XIpPCOQmjijNKqSGVbb7ppJFgktecj+uVqeaX8YXJIpRp6nlmkiQG6meGVbo5IZ9PZkhnn3bOCSR9kzoI4KGEYqllit0NKiaXaV4J6n9xgtjdkXueCFmpnSJ4p5ybkv8KqY1xyhehqUuelyisjIqaZ6iu7vgYm6riKqmZwTbpq6+XyjqffHrC2CyveCr7YaWcvmrsi4ZCK2eE0mYrLLWNaptsr166dmuruX76a6TMsjpque5yG6m3U7pr7bwewjmroNfOiy+lmbYbrqKnMgowjt+m27C/D4877aLDjpkvuPgC+q+4B2dpJbb5WoouxI9mRjG9GtO7JqIf11gysRAmvHG1La/3J8jkRknwfiu/2jPPNdvr8cUsE42syw4rSLKjk24bLMYhC+lsyiXvuyq8MqscdNERe1rowFHfO7LNRSY9tq1Zx/rs1hAv/K7JTJurK8dk1u2s2lseqzfaDIvt7CaqME8cMHvX1bk21nLrva7A3cKdOKp+Hy554I0r/bblQgue+Ml5Q43y4GovnurQju9td4UIPw5f5mevnnbjy1qMOukwUz246LtOi3ethuetM+WIE75ztHTTbPzwxSN/PO7JM79809DzG/3bznddH9LSZ0/99MQ/r333yodf/fjcN1++99sXfL1s4JP/vfnvo9/++eLT7376+M8ff/3rr69//vADoPwC+L8CEvCAA0wg/wS4QOWA7YGl85zbvOYwp6mPc/IC2t/YJjGpSe5nboOgCEdotdyJy4IdDBvt/KewmunsZ8Cj1QaNhr8Y/5Lwhu1h1+hu1q7a6ZCHjLmbC1sYPNZNrYJYYhEOlwhBY0XuZa9TIQXTQsSc8Y6GNkye1USXxWIlUYeaU5Lwumg99ZkQT1Bc2gWjSLowes6IWlPgyZxoOBSmcXRbLBvjjkhFFU6Qjf2qF87gGMb/3fFrKzzaGM1WRD1ebmyHjBvZarS7WSFSdzmcG/oiqclEinGOjPycIiV4wi+qcZJXK13o0CQ2dbEyfLsKpBtDqcTTxYuGMETi/jBZuJlN7lyu3Jwk+xfL24GujlwLoS2PiUsO+nCXvfOgLCEZymKekpgZrOTOaqkqXsbxl2vsISDp583OMVOGbcyk4obJwtStU/91lkxmKX2GTHhGLJf0VGA5qWlPZQbznePqHyn/iTmuxS6fokTlLT/owRIOsZXprBhCLWfNVL7xh2yMHOB0CdCCitOeZHzmJ9lpRnWS0XfA6uRBBdk2dXo0heCEacdst0ekiHSKHY2mRPHo0gzS0Z04PekVE6pRnUbwaecMKUdxusq+VS5jgzTlI6WoqXkykG9TjenvzllRO0a1nyYF5lEnatRActOK3jrrQG36VdMJ0Z1bxZ4Y48pTiAotZdo0q1jx6rqSHg+rFaWrYKvISX0Rtpr1hClfIepNT3VsYGrFGUWzeViwwjWlLDXsWxm603368XSNdeRje7rTGAoUqYr/nGwvOftNID7RmE5dbWCrCFnRQrWlny0t+5wpWdpqcZnh3GFbCUnZzQq1s0Z96U3liUWp3lG1szPtKxcLy4fGzLJavaFjb6tBoob1evjM6gt/i1w0GnS4zEXnbDdbW4Nx96dsrelaB2tX1KIyvIDF7EX9OlbxlnV6Cy1q8M6IzoUqFbuIRCF++wrQS1p1ozUNrfYC3FDMEhh8GCatehM7U0dSl67w9Wd/CTxN82J3vFQl61/JG1+3tta+s6SkhkFY3Ih6d4Y25iJXK2xc23pxlBgFMjT1Wdm5Alehr3wp5Hw6XQ+TNKe+zGNwgRhZ+ZKzyA6u75R7W15VMlmlTmaYMl75C+HMBnWvbc1wj1N7ZBrjWJuFtPCDOZhXH7fYqx/NrJoXKGByLXfCYGTwn7MK3zML/xOh++1unE1cV092mMy+TbFF07vS0V5Wy4oeqohROuA2z/nHNWxybFmLZz3POLEl3nA8ccvaTbeu013WsYodbd2zotjPzqUlbJGM4F1bWtXRPa+VWZ1gsS6Z0bIWLqKDPNJZV9q6630xsXXN31Ib0tj6vXJaM2rVqrHYszbmtCdFCucil/nRoYZ0I4cMrQ93u6orZuxTV1tlxfr61Di2dgBtnW12YxWOVM7aWu9KaQBje80yrbFDJS1igsv1wt9NOLLhXV15WzzY1RY2lFt86+3Se8fxJrXGHdjvgAY6t/31+D153ECQF3jkB395r4etbHuDt+QrTbZ0+zjucYI05v/kTi6qORrtPQ+6zN5u7qE1i9aU2znpwE52x2Me45oXncVHx1QQEzpmprtb6felM8ulHultJjXMW++qy8kOVNktPNz7ll3QGS72kO980kLmddq/7OJr0xyDsIb7JuVO9Frbt3oQb6akAy7jts883YTerW7VLXO9h5ifXpfq1SdvZjTfHOEUHvzf3S7nKMed53PH9ZbZfXcFg/b1jK56lqMu6u4C/OSz63Nh71doLot81LcXs+c730kQG1z4o0Z3n42fd97jfuBLjb6zJVl1N/9+466d94iHencp693vRg45iWE+feSHfdV4tzrsYKz9t6de97kG8+oZ+H7t57zwjrf/vPRNnufN31ngxwd5NNV3mtZ+0kR9+NZ0Rod2g/ZsdMdeWmdgw7dgCHdr5fZx5gddv7aAedaA9/aAwIZ0Z5dx8xd62fVPB3Z+IYhlGqd283du68dmEMh5EkiC+peB5iZoiBV7LOhe64Z9a+dz6odpi8Zxr3Z9hWV9EvZ9JZdfi7drXed/1FV/6FeE8OdvvGWDA1iDtkdxr5V33tdUBIhy47d0DUdtLgZ9qMeAH1h5XUdcE0d5UDd797dsdgiENqiBCOR0PrhyF5d9P+iEtBdcXziGN1Z5Z8ga1Yd1vldsxcd9FFeHzZZKHMiEGGiIv+Z8Jfh0tSduYmiFkNh4MbV7AQD/SHMbyIh3mGpsV0amVoU1lnU8eGl8aIigxHOVeIp2t39cmIiL1IeJVoaZ94j5FolQyGwDCIpxmIaleFUKd4Ay2GoJCIOu+IQRNnTAp23SxnR/9HOndItlt43MuG2zhm46N4FH5nDhmI2/CG3vxo2Rd2KYh3jc9W+cSIgcdo4t+G3W+I6W6IYImIvwyEfhB43dpIO+yH7T6GVkuId1Zn4OiIhZyH8CiH/tFoD6JpAUqHoN1onOeIOU+F8OOYIeqYoImXsMBo5MdYS1OJDWp4YTaYsgKZG7GJEzuZBv1pEZeYztOImJ1nt3iJLEGJJmqJKSB5E2SZAYN5IlCX4XOYrP/0eRjLd3l7iOw0h5RViOgFaNGFl3SUmH5CeT9diL/ViIVHl94OaILwl5iddy02aP+SeNh2hoA/l1ZmeKoaiCn3h6waiNOMmV5iSMgtd0rgd2WNlo9eaJmHdsfGZ4eahhUUmWSSZ0KDeYrLiKOilbHYmOh0mTO+iUoniWQhiGpaeQbEl8W3eZJjmVX3mVRamHYKeYb8d8XdiWe0mORYmaFriTiomWgGeEPwiL24eZineIeZmM4ZWSM4iUgEiavEl6Bfmb+weXsvmG0amXUUlyoOZqb/mKnbmcwYeJTWh/ugh0T0aSrCaC5beXJuiVWtmVdnaFhhmUEgmXURieAgmHXPWHhqvogvy4luAIbv4nmn84nnJYnv+ogBH3nfvJd9GWgraZnrk5nEtIn08moP6YfLDnma24gqBWn7EINlPohZL5fw83dtwGkBv6kPzJbzdJg23IohVJmyGKoS4KmCuKhvyJjDlWjAU6jvaZjQCaoARqcxI3iy4Zm32JaT0ZhGD4jRH4olRnkEQ6o0XqfUc6moUohmW5krAZk1uoeVgakV1ao+qZXnu2hL25nMD4XBlKnUKZfkj6mhlqpRbZnY1ooKKopnfJpl2GpsvIp8QppnOKc3Xqo+Lnpc5Zl/P5pDaKqEvnpizJjnLap4xapjRqlKR5nCKZav+7uYwNOZcnupjPeaHCM3VYyHnoGZ9DSZjk2X89uJFZWaTyKJyK2pvAeKZal6qu2XNr+KaZ2IbKJ6lJuZZciJ2piakpqJmh+pDG6qGCCayMOZZJqpyb2pplN6skOqXLCqWKeI9E+KN/uXG8eD/0BaQ5SKayuaahWq7Eyq2wSqR+6o6biaLp2oxV+ZHbea90ya4FmK8aio7xqowHyXpMypeyaKE5uqfreq4cOogG64fuuaqkypp2CXppdq3yWZyz2F60aKeb2JgW24eyR3iPOqQU+rGyCpW1l6wk25+CmpA32qOmCai4iKAgaKzL92mKSo+96rKTSmshu6Ej27NxGqj/gXedBfeT3hqYdCp/AnuakZl/MCqXl3eUVNqcMEmrvBik0Om0RfurHSiiEqqwsZp6hUmFDjuH6CWyGGuoRvu2VCuEuBmD0rqVyYi2MTub/KhyptpoXyuscSujnuppVms/YmuWhOqO7pePWiukqVihnHmNeVqdxjmtj8lyeWue7wqaSktQRCm5M8u4+fmMZlutozewaum4i3pxOdmqPruz+PiZfAeopSuva5uiAahcB8q5UCuzDRql6Ad1mfuUnXuCQBuXHGl6gfiqqbqg9KqzWnq4kuiTQ2i87DmJ4Ke7OMi6Lwu73KuvF3ufbDi5xeuSgVtzs7eI98qUeFq9OQu+zBVLqkjbjZZrst27uI8LssO6k5L4vg0LnOtZktiUnNj6oPiKvPmrgrWblv2LuW2LvuErv4eXsfWbwPMLwY0avHe6P2pLm0oWuRgcwlV7XfUxtCK8miB8tYUaqSh4WulnqyPKpe91m2inq7ErUJ2Ksv6ZuDgMwmM6ug+rvb1rmjYcay4MwBOcwdl6xOcLnE3rXx3asnq6vEbMxCEMlErcvDT8jO0qu407mZRLwnmLxe4bk9oZo6BqxchpvEUsxrn6wA46uyuMtprLtUs8x/8uHKzJqYTRCLhhDF0NfLcUOaHQO8NOq8ZEbK8be5JvTMBmioppfMAJa7dMq7pkPMASTLruaplhTLMMaaJl27Ice1wkDLARF67UG72xqq4vyJ3t+bsom76nzERv28Wry4qVOK/Hq8osLKq+iazthJQXOEJU+sHiW6L+irVQzKu9XMAMe8GynJ20XLOt15nTrKPwSbGZ5ksqd8TZS7eC6MwtfKnXbMjLXK7K7MT7qKmaLLPz9bnnbMnlfM3RfKy6rMIS28TEi5dLC8jYyLNVOs8AvcOymM5/vM4pnLw7msXwTNDBma0ZCbaR/J3UjKNSaszfZMv1mpCcGq1tnKZ/urL/SVu3DevQCgqtLcrGCP2hY0y2PBnSb1qY/uzBfUypNr3QqtqxqEvIRzukF1y01EvRwqrRFz3LAwqhzLu0HQ2C+LvNaOyNH0rKn8q7Qr2+dHu5jky/ShqaQz2PkLy12nWgynqpV7rVrZzVesvLpnyU4RzBuixCmuuBSG3VZu2RfbvUzLzWNvvUX62zUi2eVtnVlLzReb27YZrMh8vOcCrPVSyVD/3Nw1nMjUzPvteS5tjY3tyve32+QixuclnRFmzNjJzStBu16pjHmo3PSpmedbyPa3zXjyyO8RzZl82camzLY73aOd3aGtx8g3zYS/TOtK2/TS3Q3VywHfy0k8zMqNJ5hBZaz5iMxKDr0APdz3Ks1cCcz+8J3Lg63EGc0O3Jt85Ny8f9eMnt2ZsMvJu9wS/M3s3ayaL719IMs9ed1g191eot2fCLvS4tw5htv6qJuqSs2ltq0VHNo/zs3XaszUR91HadmWE54HJr2sJdmi3NzWCqvLZ9qmlruk7tnds9ztoKmBXOySXrzvvMshxs4BnNvyrbpBre3D2tuI5Z2wb83OqtsSWO0v8V572ZDJ6BN8x4y5Xd59ce67cGuMdO+rNS6LoS3dmDSteLTNq5q9nUPaImrZ8UXIFm7MesjcJfjIS4l6XWParVbeY1DcQBbLtsfssy3uJo/dEs/tZp/sMRWtL3q8gg7bb+/b/YuJJDruTfyqpZu96Ce8jyed5SOsILPLxsK+jCrNSIjOBvrse4zMN33roB6cuaDq91Ds7gfcAEDuC1CtOifuSeLOVLKleBjueDXpmJOuqhHcpe/OOZ7uUJvsugvNta7pZ37NsJbMLi/b17/Z9LDreuu+ObbsevXalTfNo6HMNfWeRgzOeDi+EMfbBRDu0p27O5LewhDue1HI8u9+b/U2va/HrTat3r7Q269ZaE217PPB2xeAiWvq7sy6zoUuvhli685K6/ZfnDC8yskHuzc+7TIgnUw2fQZC3ACm2CUw3h2u2rHp3a7n3t/8rvFT+2AY67BPvlm37uj17YHN7dEJvLYl3DLj7XGkmuVj7aP07HiUrmjb2rAT+tGovyhX7rh/pAxcrVXYvkPa/rtHrzl5jDys3D1O7GKS2IZAyf/n70hPvLUP3L0p30Qb/0My30TB/zv83kNR7sFk/jkG6+bo3gdBnHnqvqCs3zvpzqvx7QVA7j9my4O+2XbXrw5dv2x25ACr7osU2tdI/OVc7Rid3lozrw//zycpThpbywunPP30Vv9x7/4PPt6j0O1lK+9U/P+Cf/6dRYxo1/9xyfqRtP9WWu0pP/yrv+peEtvVvcy20t9lQMxA1urlyO5kMP9abOyh8e+/Ie9lcMrkTO4joK8c8s2vtO8fud26TI+ol/0KUP94S95jmNmGtv+6COrs6u8k2P84B96jEtxWOO99r+6sn987SP+tgu+lMu+CR959Ht+Hx8/rj/+e1P1caP+MeK4wABAMA+ggUNHtwnUKBBhQ0dIoRYsP9hxIgOLV7EuFBiRosMFVbk+BDixJEfKRLE6FEjypAkEaYsuTLhxZMsO9ZUOTCmyJcmT7rEObOlTKA4gbYMulGm0aFNcyJVqrOn050gl+486lPoUKs8D2a9+ZNm0q1di0ZlelUsVZtSg4LNSLYsVq1Qp8ataZci3LR45a712jTsW619Yf4lrHZvYbKH597NabbuZKKM78J1/HQs4MxV0eYNiZgzZcGKu8rVK3qxac+IHZ9tG5luZdpuYX/dvLVz2924OfaVPXqwas21S6O2vNov8dONkxsm3Tz2bNvRPwuv/pv67eJepT9W3lv169LPWydezhyyc9bYg/vO7rb7e77/7OVfBw8cf33e1qevvyy58gR7TzLtkuJPNwJBG+y21M4jr7b58KPPP/gKZDC+Co2z0EEBc+tuwAbN6+9A9DYsDzoJtyMRvAg1jCpBFDH8L78MZ9wvNxkpjPFDEUPjMUAT9avxRxVhFNI7CHXskEnFEvRwRQSblFLBKqO8r8QsrfwxsBaPsw9FMN0LkkvuchzxSie33LFGHIv0ccsJmdMLSzGp9LJK5IYr08D42uRyzxTRlPM8Gk9cUs0nvwRRtDrjvFPRPJH8q7czk5zTRi0FHdPFFg+9VLnvoIQ0w1CPBJTUNP/Ec7xG3TSVtFRfDW9BONu70NAwE6XUzlhxRdXC/zcDJVTVQskEED3MhO0R2Ga5IlTQ7/zEUjxHmU3WVQ6dxXRX7E591k9xw42WRbbMZJRbTdE9N8RPvV33UGnJdY3Wac09Fr5q41xWUmptZTdfcGHVslN31SUy3j7htRZZRL99d1PqxpX4Vja73FbJbG/E98GCI35YYYIrlRXkTBP+V11LaX3R2JSh/RjXgdfFWGV76Q3YZZwbzrVbiz32VGYgp1x01ZOLXXPUdC/OOFKNaxV61Ucl7TdfUJN+dmU98Z3X56CfrnrWrTf+GU+ej/a6U2Or7lpfs4fuWeSA286UbV5fVDpqplml+mavKc651Z39jrvukocsF2Kbi54U7fKv8eYVZaT9HdzoXxuvvFd+4b43WZ5n9tXzwzFPUutBRw6d2NIBbhlbty2v+Our29VVdD7JFrV22bN23WDeTUzd6ZennhTQgzWHfffVby/87qXpLnNtrJcHW8TZ93a8Zr63l/d35ElX/vX0dBeeY6Kxj9z764E2MvpSYz/e9PU3Xxzm3G2vXu/2Act7/HoZN5zUCGe3mFnNe/sCoPuYd7YDPs95CVSc/Tr3OMJJrmxNU5/5VDc3+7CPZb37IPOG50D8Ba9jnNNd2EyWwtEF0H9xa50IT8i41CFwb6AD2AQJ2DzqAe16x1MPzVqYuc8NsYCcQv8h/CanPUrNj3b8uxzxXjbFDoaQiZCLIA5lGLsrIu6CTPzhDJ82wfhNT3w21OILu7icUPnOYYBbo/waOKAw9rCCCysgFs9IvzFyTYz7k5sboSawNcXxfYGjowJvmEMNjjB5QPTj+UxnyLHtcYviO1IZMQY9/LmwfF9U2wDh5sNGRlJZJESkBB+oyk5ejozkS9wGpde3RCqRepD8HyG9OMiErbGX1tNgG63ISRgaMXx61J7jcMnBXAarfsLMGCD7J8hhAa57uBsWMo2pwnMVEXhJDBkVJYlKXwYTmFAcWfYOqTM6HfKT98NkLH+JwbSJMnk7DGUl0+jI7+0wm64jZg3/7blIyp3vnS6EJvjwyToQ1o+f75Sjxa4ZTkUqU5HsDJk/ibg0jMaQjQ01IOoYSs8N/rOSAV3nQOEI0PTZUpYD7WghRwlSlHZzmyPto0QvilNtcQ+PL4UgD3k5x+9lUp5VXKAxrclCknqzqH9kKTqBqkvw1fGU0TRjQjGKxKSSdKm4W+glt0pU45nzkROrKCzradOTZm6i4iymWFW6SovqVKS1lNs0ozpVHYLMo9rUn+ByGdGSolWqTtweIMXWpXn2k6emXGlQBXrFxnrSsPG0I1t9msfH3pWxZnWsZuEaWfR5VpOsjOtmhdjV/IFxiaeV4k7x2j+nxfaWrkyrackK/06TVhVn6qTsa3f7TX3WrLJLtK0lqbpYq5ZTqmElaHT5mVwTfvG0PeXqct0ZRZh296y3XWsTM+hZUmLTlNWlIFYv+cq/XfatRHWmdr+rXNIidrHlFSpc0Qtd/LIXs0M1b2blm1NmBhKcgI3ufXmrVvrmNrXcJLB/61rYdIoxvhf+qQfvyUcF71LCw1VjVkXMWgQvs7FjrTB4C6zVA7eYuIm14iTfNlu31til1B3dPm282pCueKaB3aWGP6re1sqYlqf7L3SBO+TQRli4ds3veX88YCMXecSoFfIskWxZLip1vMdccAkFG2UVJ/ehkP0yhNHIx4PCq7dcJhlrs0taLSXjmIbnTOUynerRmr4wiH0tKF+vJWekSnfHigUpojXLZ+56tZRH//yzQVuaXvGOM6hGDW+dp2xfnBKP0RGcMKcRpp7JNvm97U3xfxE6Y/t1GMn5ZDKLBehQNDfz0FNmoKUHnF0zT1qPkU71cVP9awbDWppPpjSEgU1hVTeaycIW9LKDDdqJEjvAeQZxqTVN5GXv2a94TihEVyjpdga6vo9WrppdrFplfzmI3n5mZ+GpZGlP+7l7tTaZsc1ZDzMMz7w2I2zZDGz8ujrXyf52vEfdZW4X+45ifuJVnw3VOy98kOGWrZ9XqWNd93TbpQVwnGHc7ywmmpEu9fhcyRvmBz88r78tdG23i+qM/rvQ+T42ygetcShf198k13eoL9vuawsS1tO9qf/FsetsQPO8wbaG+tP1zV9we5nfCQ44iOFc76Kve7RM3/nSVVztpH/WuhZG+8oXvdduc3SYtb74uF8OVq+DVt0vXnKWN01xdstd7HG/tLvBHvU+E1avRLazlWft5KvnHPDFs7nOIU33hl9d4Hilt26HHeN1/zXhlFR4rCPPbBM72NO4pqS4i9vWG5/cx0C//JadffcQyzXIKX3x6Q2p+kqH76v7lnp/s+36Mzee80Bu7eEhn/vUI5u5GT5+7ZffZOEzXPZdD72sCZzvpiPWghLvNeVHPv3MpzKNtMf4YQf/eEzPncfeR3d8uW/6Tsv0yNWfKjWhn32329636u85mLvtNqRjvfeDrzS7Mv3LNOLbvx4rOJabP/GDPwAEv72jQNrTM7/7qTlDN6qrvNQqvVYCJZWbOqsjDhviQOwDub97NxLkPaIDQcETQYTzP//SqHIztI5zuMAjPFJzQeezv+RDLnJiNaeyQRNkQQEMObLjQZFruxqkq40itBHUm956wCZsMxz8vd9LP2bDPwSDN8VzwLJrP/TKQic8QOsDPSacPgIUw/Mrwv4Tw7aJwGgrQUeLOmPLsS5iwxs0v+iDw/uTQxT8uf9LsplrOaUbwsWLvaPDrdbbJLg7t8ljP/eyO3zLus3DQzS0PCmMoz40/0EFBLP1YqreS0JKvMLxa78QTDdMjDhW1L0xJEUVPMPvK6seREUI3EPk+zoBA0Wg0ztGjLmwozYltEW2czMEBMZd3DVJTEMDe0UZfD3GI734i6WDay4NFD/Pq0JpzDvvmriSQ74128QtfMREVK1enLdB/LxkKkVHDEC1eypKtMKBI7cCW0Ug9L+Du0V8nD3XI8dw9L2Mq8cppDRzhDhqJKxPq8R71L5ANDuhUrR5lMgrg0VWQ0h0hEjlm7AvdEWna8S3E7CYasISk0Yty0iZo7V7zEhuzEGJy8YCxDmRtMOUW710LEVWXDKuu8PtC0JC1EHNG8jw4kIy9MH58sOYdP86w+M67SvDzmtHmjoqorTEs7O3kNM2VFLJZhzAo+RKrITK0FPKX+y9hcxEkXs+yTNAeqxK9ys8gPzJOIxGTTTFBnTDamKwjsS96/NCC2zFbhxJe5zGkATMdSzMpoNHaJRFn5Ss0asyg/tB46s4VVxE1GLDy+zAqpPJqDzMyqwy/eKwyPzDycxAxNPFwuxCxJS31DzH7tO6tgw/4DPLzTTIVCxN0avNUAzLVjOuqaQoCjw1xTyxvSRL5evCWITBgsS6yUTO1ZQ7joOn78NMSKTIovxA42TGizwydZzIiQzO4GRN4LRLJUSxZqNCqrpNl6Qt8tzN5hStDczL8WTJHTTyNc9kwHhES5PDu0krPvOMwbFrS3X8sMCcxYO0z7kcyvy8ydjsR6MjwYDMR1BLRl0TRd4jTMasy6DkMQb9yGBEz4xzypv7PJvkS448UMv0zRTcUL/ES18MUN9MRYiEToBDUIb0OZoT0Bcl0DeUSrrcL92MOJIs0aF7TtRjzuij0cWUUbjczxm0TpB7TJr8OH48SwyjTg9NUhWVv/bsUcX80U100EBzvElU0DZMO//MURzlOwilP17MSfYM0jEbUyK1OCO8xri8ySNsTNRERPfE0PW8Sj10U/y0zcqENg80RDNs0w8VyvQ8TShFxk5US5ME0Bn/LFQoU08Hm87/NMwVVEYUFcp+vNFqtD5RY1QaPFWU/FTXvMCPtCpHXcY9zdC/xEmqlMfjzM7WNNRLJLG620aaZFWNDM0mNVANBT1Xo0M5xE4+vb04LUlfjc5FjVJiTUo6PdYJrLlBFVZmlT4hU02DDNatvMs7LVCXdEd5TFZtFVde5VFwBVFEfNVd3VHlVNFj1c/FXLVmVdKznJmtI8hhdNF7K8DbBM/evEo6S0A8FUIK7dJ67VOXm9Y/TVEpG9jhq1iHSTxzhVeK9VRjfdhyBcQHjdTBhE/JNESHpVYjlb4s1VSAXUs0hc37HMV93TD+e08chMFqVUFEfUFoHVd0/y1Gq+REmJVUsLzZitRWKk3aIOxZfd1SpBTZ7SRGNS1ahCXWeF3AlTRaMxXaMKUyFjVGcq3V3yRV4LNagcTaQwTZpRXGrmXSr73asMVUJMzMfXxUDGxZHx3ZJ6XUxyu1M0xOTwxchhVEMc1VgXWtMnM5vrXIf5RVwD1ctcVNaiTYVRVbOzXZiBW6N7JcvXXay93Lz/xUbOxckp3bWB0/r7XRnWNT/BzVN4NTysxa8ivSlLVd6iPC4FLcuG3U12zV3CTN0i0/eh3d+ivHE31da+1XGP3YIQVaJxVcOeVXjCzetTve88RbjF1c5n1WGvvVx1Xexi1VX1PY2MvXVDXepdhk2ql9WVPFXP9EVuE1SkstX9/Nv9zlzRpd38FK36xcPMfLWIMNPiB9ya2MUXaU2u9N3NGkXVnVWGcVSOcaYDAVTAO+WwSuTwU+VwYeXFS90NZFVdVN2O5dWA5W1vXzw4DsTs1c2eqNyMrN3JBNYKQt4Q1uSb9kyhjm3T8Dw/3tSe38yuR1yPTVS9Os2bKE1gbd3kjr4bb94ZM84YAdWkEdWws+YlMFVC/VxhMcYa59Yrb03OWkXOT1xOE8WsgE3zDmyaf8wBze1o6FX5ldVi9+X+/k3hZ2Xbn/NeErLln3E123neEOFlIQ1lkGLlgjzt/UtVeKnFFdHd9HLlYPJl8Kvt2HBFvE3WD0a77TxVeXhbO+beIapt7drWL7hU4J1uTdE1tiYtxAHmVJpl9KjmBwjM05TkwbntAV7VXMk8tZxVW7Dd5cRN0W5WJEvtRoBWOyBeELVU4l5tYQnd0Ohl0mZkZRDE9/nM9bHdZEXle6NOMgjt7rnOQe++Y59WZn/F0xdsNBrlL5LNs/nsY63lt2NWfh5NhQPtTQJc4TlWdjxuDzPWAnXt6dFeByfuUs9l9ILVxQnVlrVlnzReF2zmZa9cg2pltONtFYVuRh5ud/Dmf1Zb6LRWaK/2a5bo5khNbnNA7hR7ViDGXIeo7F76RPXMZk8T1pHdVi1F1S/d3lV+vSB/blskPjbo1cdlbXmb5gm2XoiE28jJZN/B1e+wVo6b3ed8ZgaK5Anm5XbpbWanbVMn5Xfc1ZqnZprTzTlLRYcNbh6tRHrq7pptpmeG5quFPVg03rT55eLHRnN8bnju5p0gXkWT5Sla7DdZ7fmszbL+7LYI7kVN7qgW5sHN5mlJ6vp51cC31T8RRabC0/mjbbQhzrBZXSw07SmG7rcKXPnbRWvI5EKU7XMd5sT6bnwwZsxCZUH45QxW7mlFYo3MZpp9bS2YbrqiZTYl5dzqXFcZ5NwfZitItOSBJ97Ze+6K3N4vMN7uTW6OXu60ld4pvWUIMe7lLWXpW2btnGbk71Vvl1YsPeYfyD4a0F6lNcwnP0U6xmbXXWY6DcY7eWOpZVYxeu7Y102fqOYsnF4vwWzEVGYtjjWDae3ADnTJqV3c+mub6F1VOdat3VZdg2XfhWWMgWcI8NaZCewzs+bhqumoAAADs= width='250' height='250'/>
+======== КРАЈ ФИСКАЛНОГ РАЧУНА =========</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-lg-12 text-center centered">
+                <button type="button" class="btn btn-success mb-1" onclick="OnPrintClicked();">&#x41F;&#x440;&#x435;&#x433;&#x43B;&#x435;&#x434; &#x437;&#x430; &#x448;&#x442;&#x430;&#x43C;&#x43F;&#x443;</button>
+                <div style="display: none">
+
+<div id="PrintInvoice" class="panel-body" style="margin:0;">
+    <div style="margin:0;">
+        <div style="width:100%;overflow:hidden" class="row">
+            <div style="width:45%;float:left;">
+                <p style="border: none; text-align:left;margin:0px;padding:0px;"><strong>&#x41F;&#x418;&#x411;:</strong>&nbsp;<span class="badge" style="background-color: #fff;">104213669</span></p>
+                <hr />
+                    <p style="border: none; text-align:left;margin:0px;padding:0px;"><strong>&#x41F;&#x440;&#x435;&#x434;&#x443;&#x437;&#x435;&#x45B;&#x435;:</strong>&nbsp;<span class="badge" style="background-color: #fff;white-space: pre-wrap;line-height: 1.3; line-break: anywhere;">PROIZVODNO-TRGOVINSKO PREDUZE&#x106;E EURO &#x160;A.M DOO LIPOLIST</span></p>
+                    <hr />
+                    <p style="border: none; text-align:left;margin:0px;padding:0px;"><strong>&#x41C;&#x435;&#x441;&#x442;&#x43E; &#x43F;&#x440;&#x43E;&#x434;&#x430;&#x458;&#x435;:</strong>&nbsp;<span class="badge" style="background-color: #fff;white-space: pre-wrap;line-height: 1.3; line-break: anywhere;">&#x41F;&#x440;&#x43E;&#x434;&#x430;&#x432;&#x43D;&#x438;&#x446;&#x430; 9</span></p>
+                    <hr />
+                    <p style="border: none; text-align:left;margin:0px;padding:0px;"><strong>&#x410;&#x434;&#x440;&#x435;&#x441;&#x430;:</strong>&nbsp;<span class="badge" style="background-color: #fff;white-space: pre-wrap;line-height: 1.3; line-break: anywhere;">&#x41F;&#x410;&#x412;&#x41B;&#x410; &#x41E;&#x420;&#x41B;&#x41E;&#x412;&#x418;&#x40B;&#x410; 19   </span></p>
+                    <hr />
+                    <p style="border: none; text-align:left;margin:0px;padding:0px;"><strong>&#x41E;&#x43F;&#x448;&#x442;&#x438;&#x43D;&#x430;:</strong>&nbsp;<span class="badge" style="background-color: #fff;white-space: pre-wrap;line-height: 1.3; line-break: anywhere;">&#x411;&#x43E;&#x433;&#x430;&#x442;&#x438;&#x45B;</span></p>
+                    <hr />
+
+                <hr />
+                <p style="border: none; text-align:left;margin:0px;padding:0px;"><strong>&#x418;&#x414; &#x43A;&#x443;&#x43F;&#x446;&#x430;:</strong>&nbsp;<span class="badge" style="background-color: #fff;white-space: pre-wrap;line-height: 1.3; line-break: anywhere;"></span></p>
+                <hr />
+                <p style="border: none; text-align:left;margin:0px;padding:0px;"><strong>&#x41E;&#x43F;&#x446;&#x438;&#x43E;&#x43D;&#x43E; &#x43F;&#x43E;&#x459;&#x435; &#x43A;&#x443;&#x43F;&#x446;&#x430;:</strong>&nbsp;<span class="badge" style="background-color: #fff;white-space: pre-wrap;line-height: 1.3; line-break: anywhere;"></span></p>
+                <hr />
+                <p style="border: none; text-align:left;margin:0px;padding:0px;"><strong>&#x415;&#x421;&#x418;&#x420; &#x431;&#x440;&#x43E;&#x458;:</strong>&nbsp;<span class="badge" style="background-color: #fff;white-space: pre-wrap;line-height: 1.3; line-break: anywhere;">220/e1.0</span></p>
+                <hr />
+                <p style="border: none; text-align:left;margin:0px;padding:0px;">
+                    <strong>&#x415;&#x421;&#x418;&#x420; &#x432;&#x440;&#x435;&#x43C;&#x435;:</strong>&nbsp;
+                </p>
+                <hr />
+            </div>
+            <div style="width:54%;float:right; align-content:flex-end;">
+                <div>
+                    <div style="width:100%;display: inline-block;">
+                        <div style="width:55%;float:left;text-align:left;">
+                            <br />
+                            <strong style="margin-bottom:0px;">
+                                &#x411;&#x440;&#x43E;&#x458; &#x440;&#x430;&#x447;&#x443;&#x43D;&#x430;:
+                            </strong>
+                                <h4 style="margin-top:0px;">UYY9M33J-UYY9M33J-209722</h4>
+
+                                <h4>&#x424;&#x418;&#x421;&#x41A;&#x410;&#x41B;&#x41D;&#x418; &#x420;&#x410;&#x427;&#x423;&#x41D;</h4>
+                        </div>
+                        <div style="width:45%;float:right">
+                            <br /><img class='QR_img' alt='' src=data:image/gif;base64,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 width='169' height='169' />
+                        </div>
+                    </div>
+                    <div style="width:100%;display: inline-block;">
+                        <hr />
+                        <table style="margin-left:0; margin-right:auto;">
+                            <tbody>
+                                <tr>
+                                        <td><strong>&#x417;&#x430; &#x443;&#x43F;&#x43B;&#x430;&#x442;&#x443;:</strong></td>
+                                    <td style="padding-left: 20px;">3.295,70</td>
+                                </tr>
+                                 <tr data-bind="if: Specifications().length > 0">
+                                       <td><strong>&#x41F;&#x43E;&#x440;&#x435;&#x437; &#x443;&#x43A;&#x443;&#x43F;&#x43D;&#x43E;:</strong></td>
+                                       <td style="padding-left:20px;" data-bind="decimalAsText: TotalTax"></td>
+                                 </tr>
+                                    <tr>
+                                        <td><strong>&#x41D;&#x430;&#x447;&#x438;&#x43D; &#x43F;&#x43B;&#x430;&#x45B;&#x430;&#x45A;&#x430;:</strong></td>
+                                        <td style="padding-left: 20px;">
+
+                                                <span>&#x413;&#x43E;&#x442;&#x43E;&#x432;&#x438;&#x43D;&#x430;</span>
+                                        </td>
+                                    </tr>
+                                <tr>
+                                    <td><strong>&#x412;&#x440;&#x441;&#x442;&#x430; &#x440;&#x430;&#x447;&#x443;&#x43D;&#x430;:</strong></td>
+                                    <td style="padding-left:20px;">&#x41F;&#x440;&#x43E;&#x43C;&#x435;&#x442; &#x41F;&#x440;&#x43E;&#x434;&#x430;&#x458;&#x430;</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>&#x412;&#x440;&#x435;&#x43C;&#x435; &#x43D;&#x430; &#x431;&#x435;&#x437;&#x431;&#x435;&#x434;&#x43D;&#x43E;&#x441;&#x43D;&#x43E;&#x43C; &#x435;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x443;:</strong></td>
+                                    <td style="padding-left:20px;">18.9.2026. 08:35:23</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>&#x411;&#x440;&#x43E;&#x458;&#x430;&#x447; &#x440;&#x430;&#x447;&#x443;&#x43D;&#x430;:</strong></td>
+                                    <td style="padding-left:20px;">209496/209722&#x41F;&#x41F;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <br />
+
+            <div style="width:100%;margin-top: 30px" data-bind="if: Specifications().length > 0">
+
+                <h3 style="text-align:left;padding-bottom:0;margin-bottom:0;">&#x421;&#x43F;&#x435;&#x446;&#x438;&#x444;&#x438;&#x43A;&#x430;&#x446;&#x438;&#x458;&#x430; &#x440;&#x430;&#x447;&#x443;&#x43D;&#x430;</h3>
+                <hr style="margin-top:0;padding-top:0;" />
+                <table style="width:100%;padding:0;">
+                    <thead style="font-size: 14px;">
+                        <tr>
+                            <th scope="col" style="border-bottom:solid DarkGray 1px;text-align:left;">&#x41D;&#x430;&#x437;&#x438;&#x432;</th>
+                            <th scope="col" style="border-bottom:solid DarkGray 1px;text-align:right;">&#x41A;&#x43E;&#x43B;&#x438;&#x447;&#x438;&#x43D;&#x430;</th>
+                            <th scope="col" style="border-bottom:solid DarkGray 1px;text-align:right;">&#x408;&#x435;&#x434;. &#x446;&#x435;&#x43D;&#x430; &#x441;&#x430; &#x41F;&#x414;&#x412;</th>
+                            <th scope="col" style="border-bottom:solid DarkGray 1px;text-align:right;">&#x423;&#x43A;&#x443;&#x43F;&#x43D;&#x430; &#x446;&#x435;&#x43D;&#x430;</th>
+                            <th scope="col" style="border-bottom:solid DarkGray 1px;text-align:right;">&#x41E;&#x441;&#x43D;&#x43E;&#x432;&#x438;&#x446;&#x430;</th>
+                            <th scope="col" style="border-bottom:solid DarkGray 1px;text-align:right;">&#x41F;&#x414;&#x412;</th>
+                            <th scope="col" style="border-bottom:solid DarkGray 1px;text-align:right;">&#x421;&#x442;&#x43E;&#x43F;&#x430;</th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-size: 12px;" data-bind="foreach: Specifications">
+                        <tr>
+                            <td style="border-bottom: solid DarkGray 1px; text-align: left;" data-bind="text: Name"></td>
+                            <td style="border-bottom: solid DarkGray 1px; text-align: right;" data-bind="decimalAsText: Quantity"></td>
+                            <td style="border-bottom: solid DarkGray 1px; text-align: right;" data-bind="decimalAsText: UnitPrice"></td>
+                            <td style="border-bottom: solid DarkGray 1px; text-align: right;" data-bind="decimalAsText: Total"></td>
+                            <td style="border-bottom: solid DarkGray 1px; text-align: right;" data-bind="decimalAsText: TaxBaseAmount"></td>
+                            <td style="border-bottom: solid DarkGray 1px; text-align: right;" data-bind="decimalAsText: VatAmount"></td>
+                            <td style="border-bottom: solid DarkGray 1px; text-align: right;" data-bind="text: Label"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center centered">
+                <a target="_blank" href='/CustomerReport/UYY9M33J-UYY9M33J-209722' class="btn btn-danger">       <i class="glyphicon glyphicon-flag"></i> &#x41F;&#x440;&#x438;&#x458;&#x430;&#x432;&#x438;&#x442;&#x435; &#x43E;&#x432;&#x430;&#x458; &#x440;&#x430;&#x447;&#x443;&#x43D;</a>
+            </div>
+        </div>
+<input name="" type="hidden" value="" /></form>
+
+
+            <hr />
+            <footer>
+                <p class="text-center"><strong>Copyright</strong> <a href="https://www.dti.rs">Data Tech International</a> &copy; 2012-2026 |  &#x412;&#x435;&#x440;&#x437;&#x438;&#x458;&#x430; : 3.5.32.0</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
