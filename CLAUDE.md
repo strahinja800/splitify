@@ -27,7 +27,9 @@ struktura su bitni koliko i funkcionalnosti.
 - **Next.js** (App Router) + **TypeScript** (strict)
 - **Tailwind CSS** + **shadcn/ui**
 - **Prisma** + **PostgreSQL** (Neon)
-- **Auth:** TODO, isto rešenje kao u projektu JobSprint (dopuniti)
+- **Auth:** **Better Auth** (`better-auth`) sa Prisma adapterom. Email + lozinka, opciono Google.
+  Sesija se proverava na serveru (stranice, Server Actions, Route Handlers), a `proxy.ts` radi samo
+  brzu proveru kolačića.
 - **Zod** za validaciju svih ulaza (forme, API body)
 - **QR skener u browseru:** `@zxing/browser` ili `html5-qrcode` (uživo kamerom + upload slike)
 - **Playwright** (`@playwright/test`) za testove: e2e testovi glavnih tokova kroz browser, a čiste
